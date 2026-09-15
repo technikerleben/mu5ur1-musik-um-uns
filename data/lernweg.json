@@ -1,0 +1,79 @@
+{
+  "title": "Musik um uns herum",
+  "grade": 5,
+  "principle": "Der Lernweg steuert das Was. Der Lernbuddy steuert das Wie.",
+  "phases": [
+    {
+      "id": "entdecken",
+      "number": 1,
+      "title": "Entdecken",
+      "subtitle": "Musik ist überall",
+      "goal": "Du entdeckst Musik in deinem Alltag und erkennst musikalische Orte.",
+      "core": ["A1 Musik-Detektiv:in", "A2 Musikalische Landkarte"],
+      "choice": ["Wimmelbild: Musikalische Orte", "K1 Musik-Titelblatt"],
+      "help": ["MB1 Musikalische Orte"],
+      "checkpoint": "CP1",
+      "checkpointText": "Ich kann musikalische Orte nennen und privat/öffentlich an Beispielen unterscheiden."
+    },
+    {
+      "id": "grundwissen",
+      "number": 2,
+      "title": "Grundwissen",
+      "subtitle": "Wörter für Musik",
+      "goal": "Du lernst Wörter, mit denen du Musik genauer beschreiben kannst.",
+      "core": ["MB2 Klang beschreiben", "kurze Begriffsübung (neu)"],
+      "choice": [],
+      "help": ["Begriffskarte Klang"],
+      "checkpoint": "CP2",
+      "checkpointText": "Ich kann Dynamik, Tempo, Tonhöhe und Stimmung unterscheiden."
+    },
+    {
+      "id": "hoeren",
+      "number": 3,
+      "title": "Hören & Beschreiben",
+      "subtitle": "Hör genau hin",
+      "goal": "Du hörst Musik bewusst und beschreibst, was du wahrnimmst.",
+      "core": ["B1 Hörstation"],
+      "choice": ["B2 Klang-Zeichnung", "K2 Klang-Bingo"],
+      "help": ["MB2 Klang beschreiben", "Begriffskarte Klang"],
+      "checkpoint": "CP3",
+      "checkpointText": "Ich kann bei einem Hörbeispiel Dynamik, Tempo und Stimmung beschreiben."
+    },
+    {
+      "id": "verstehen",
+      "number": 4,
+      "title": "Musik verstehen",
+      "subtitle": "Musik hat einen Job",
+      "goal": "Du erkennst, wozu Musik eingesetzt wird und wie sie Menschen beeinflussen kann.",
+      "core": ["MB3 Musik-Jobs", "C1 Musik-Job-Analyse"],
+      "choice": ["K3 Wahr oder Falsch?", "Die Stille-Katastrophe"],
+      "help": ["MB3 Musik-Jobs"],
+      "checkpoint": "CP4",
+      "checkpointText": "Ich kann an einem Beispiel erklären, welchen Job Musik hat und wie sie wirkt."
+    },
+    {
+      "id": "anwenden",
+      "number": 5,
+      "title": "Anwenden",
+      "subtitle": "Musik und ich",
+      "goal": "Du verbindest das Gelernte mit Musik, die du kennst.",
+      "core": ["D1 Musik-Portrait"],
+      "choice": ["D2 Klassen-Soundtrack (zu erstellen)"],
+      "help": ["MB1–MB3", "Produkt-Checkliste"],
+      "checkpoint": "CP5",
+      "checkpointText": "Ich kann an einem eigenen Beispiel musikalischen Ort, Klang, Wirkung und Job zusammenbringen."
+    },
+    {
+      "id": "zeigen",
+      "number": 6,
+      "title": "Zeigen",
+      "subtitle": "Das kann ich jetzt",
+      "goal": "Du zeigst, was du über Musik um uns herum gelernt hast.",
+      "core": ["Lernbereitschafts-Check", "Lernnachweis: Der musikalische Ort"],
+      "choice": ["Kontroll-Kiosk zur Vorbereitung"],
+      "help": ["vor dem Lernnachweis: Lernweg und Merkblätter"],
+      "checkpoint": null,
+      "checkpointText": null
+    }
+  ]
+}
