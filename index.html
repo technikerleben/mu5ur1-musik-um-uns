@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Musik um uns herum · Lehrkraft-Cockpit</title>
+<style>
+:root{--ink:#17324d;--muted:#637381;--bg:#f4f7f8;--card:#fff;--line:#dbe4e8;--accent:#245688;--warm:#d78327;--green:#34735a}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}header{background:var(--accent);color:white;padding:2rem 1.25rem}header div,main{max-width:1100px;margin:auto}h1{margin:0;font-size:clamp(1.8rem,4vw,3rem)}header p{margin:.45rem 0 0;max-width:720px}main{padding:1.25rem}.notice{background:#fff8e9;border-left:6px solid var(--warm);padding:1rem 1.1rem;border-radius:10px;margin-bottom:1.2rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;box-shadow:0 3px 12px rgba(20,45,65,.05)}.card h2{font-size:1.12rem;margin:.1rem 0 .5rem}.card p{color:var(--muted);margin:.4rem 0}.tag{display:inline-block;padding:.2rem .55rem;border-radius:999px;background:#eaf1f7;color:var(--accent);font-weight:700;font-size:.8rem}.phases{display:grid;gap:.7rem;margin-top:.8rem}.phase{display:flex;gap:.8rem;align-items:flex-start;border-top:1px solid var(--line);padding-top:.7rem}.num{min-width:2rem;height:2rem;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800}.phase strong{display:block}.phase small{color:var(--muted)}a.button{display:inline-block;margin-top:.6rem;text-decoration:none;font-weight:700;color:var(--accent)}footer{max-width:1100px;margin:0 auto;padding:1.5rem;color:var(--muted);font-size:.85rem}@media(max-width:600px){header{padding:1.4rem 1rem}main{padding:1rem}}
+</style>
+</head>
+<body>
+<header><div><div class="tag">Klasse 5 · SRL</div><h1>Musik um uns herum</h1><p>Lehrkraft-Cockpit für die Begleitung des selbstregulierten Lernwegs. Die Kinder arbeiten mit ihrer Materialmappe; dieses Cockpit hilft beim Organisieren, Begleiten und Kontrollieren.</p></div></header>
+<main>
+<div class="notice"><strong>Fachfremd dabei?</strong> Kein Problem: Du musst keinen Musikunterricht erklären. Hilf den Kindern zuerst dabei, ihren aktuellen Lernweg-Schritt zu finden, den Lernbuddy zu nutzen und passende Hilfen oder Selbstkontrollen zu wählen.</div>
+<div class="grid">
+<section class="card"><span class="tag">Schnellstart</span><h2>Ich begleite die Lerngruppe heute</h2><p>1. Lernweg-Phase klären.<br>2. Materialtheke und Hörstation prüfen.<br>3. Kinder arbeiten mit Lernbuddy.<br>4. Bei Fragen: erst Merkblatt/Hilfe, dann Mitschüler:in, dann Lehrkraft.<br>5. Checkpoints nicht einfach „durchwinken“.</p><a class="button" href="docs/lernarchitektur.md">Didaktische Übersicht →</a></section>
+<section class="card"><span class="tag">Entwicklung</span><h2>Materialstatus</h2><p>Die alte 23-seitige Musikmappe ist inventarisiert. Gute Aufgaben bleiben erhalten; feste M/R-Selbsteinstufungen und fehlende Selbstkontrollen werden überarbeitet.</p><a class="button" href="docs/materialinventur.md">Materialinventur →</a></section>
+<section class="card"><span class="tag">Prinzip</span><h2>Lernbuddy + Musik-Lernweg</h2><p><strong>Lernweg:</strong> Was lerne ich als Nächstes?<br><strong>Lernbuddy:</strong> Wie plane, bearbeite, kontrolliere und reflektiere ich meine Arbeit?</p><p>Die Musikeinheit führt kein zweites SRL-System ein.</p></section>
+<section class="card"><span class="tag">In Vorbereitung</span><h2>Hörstation & Kontroll-Kiosk</h2><p>Die Hörbeispiele werden eindeutig nummeriert und mit den Aufgaben verzahnt. Der Kontroll-Kiosk soll kompetenzbezogene Rückmeldung geben statt nur Punkte auszuspucken.</p></section>
+</div>
+<section class="card" style="margin-top:1rem"><h2>Der neue Lernweg</h2><div class="phases" id="phases"><p>Lernweg wird geladen …</p></div></section>
+</main>
+<footer>HBG Dortmund · Musik · Klasse 5 · Entwicklungsstand SRL-Lernweg</footer>
+<script>
+fetch('data/lernweg.json').then(r=>r.json()).then(data=>{document.getElementById('phases').innerHTML=data.phases.map(p=>`<div class="phase"><div class="num">${p.number}</div><div><strong>${p.title} · ${p.subtitle}</strong><small>${p.goal}</small></div></div>`).join('')}).catch(()=>{document.getElementById('phases').innerHTML='<p>Die Lernweg-Daten konnten nicht geladen werden.</p>'});
+</script>
+</body></html>
